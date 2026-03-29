@@ -26,11 +26,19 @@ export const ChatContext = createContext<ChatContextType | null>(null)
 export const ChatContextProvider = ({ children }: { children: ReactNode }) => {
   const [userName, setUserName] = useState('')
   const [showScreen, setShowScreen] = useState(true)
-  const [messages, setMessages] = useState<Message[]>(
-    JSON.parse(localStorage.getItem(STORAGE_KEY) || '[]')
-  )
   const [userInput, setUserInput] = useState('')
   const [botInput, setBotInput] = useState('')
+  const [messages, setMessages] = useState<Message[]>([])
+
+  useEffect(() => {
+    const stored = localStorage.getItem(STORAGE_KEY)
+
+    if (stored) {
+      setMessages(JSON.parse(stored))
+    }
+
+  }, [])
+
 
   useEffect(() => {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(messages))

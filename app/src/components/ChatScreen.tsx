@@ -1,3 +1,5 @@
+"use client"
+
 import { KeyboardEventHandler, useContext, useState } from "react"
 import { ChatContext, useChatContext } from "../contexts/ChatContext"
 import { InputMessage } from "./InputMessage"
@@ -14,8 +16,8 @@ export const ChatScreen = () => {
               <div
                 key={message.id}
                 className={`rounded-md px-2 py-1 max-w-full mb-3 ${message.author === 'user'
-                    ? 'bg-indigo-500 self-end'
-                    : 'bg-zinc-800 self-start'
+                  ? 'bg-indigo-500 self-end'
+                  : 'bg-zinc-800 self-start'
                   } `}>
                 <p className="font-bold text-sm">{message.name}</p>
                 <p className="text-[12px] wrap-break-word">{message.message}</p>
