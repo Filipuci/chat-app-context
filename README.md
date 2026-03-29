@@ -1,36 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Chat App (Next.js + Context API)
 
-## Getting Started
+Aplicação de chat interativa desenvolvida com foco em gerenciamento de estado global e persistência de dados no navegador. O projeto utiliza Context API para controle de estado e localStorage para manter as mensagens mesmo após recarregar a página.
 
-First, run the development server:
+## Tecnologias utilizadas
+
+- Next.js
+- React
+- TypeScript
+- Context API
+- localStorage
+
+## Funcionalidades
+
+- Envio e renderização de mensagens
+- Gerenciamento de estado global com Context API
+- Persistência de mensagens no localStorage
+- Scroll manual para novas mensagens
+- Interface simples e responsiva
+
+## Screenshot
+
+<img width="1583" height="923" alt="image" src="https://github.com/user-attachments/assets/67670bb6-8b46-4fd1-b3e5-b620c0a9919b" />
+<img width="1148" height="865" alt="image" src="https://github.com/user-attachments/assets/4f8c7b65-d3c8-4ffe-85cf-75498292f64d" />
+
+## Como rodar o projeto
 
 ```bash
+# Clonar repositório
+git clone https://github.com/Filipuci/chat-app-context
+
+# Entrar na pasta
+cd chat-app-context
+
+# Instalar dependências
+npm install
+
+# Rodar o projeto
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
+O projeto estará disponível em:
+http://localhost:3000
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Estrutura do projeto
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Context responsável pelo estado global das mensagens
+- Componentes separados para estrutura do chat
+- Persistência feita diretamente no client via localStorage
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Aprendizados
 
-## Learn More
+- Diferença entre execução no servidor e no cliente no Next.js
+- Uso correto do useEffect para acessar APIs do browser
+- Gerenciamento de estado global com Context API
+- Manipulação e persistência de dados com localStorage
 
-To learn more about Next.js, take a look at the following resources:
+## Melhorias futuras
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Scroll automático para mensagens
+- Salvar user no localStorage
+- Botão para limpar mensagens
+- Refatoração do código utilizando conceito clean code
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Licença
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Este projeto é apenas para fins de estudo.
