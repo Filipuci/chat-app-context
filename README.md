@@ -1,10 +1,9 @@
-# Chat App (Next.js + Context API)
+# Chat App (React + Context API)
 
 Aplicação de chat interativa desenvolvida com foco em gerenciamento de estado global e persistência de dados no navegador. O projeto utiliza Context API para controle de estado e localStorage para manter as mensagens mesmo após recarregar a página.
 
 ## Tecnologias utilizadas
 
-- Next.js
 - React
 - TypeScript
 - Context API
