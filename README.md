@@ -39,7 +39,7 @@ npm install
 npm run dev
 ```
 O projeto estará disponível em:
-http://localhost:3000
+http://localhost:5173
 
 ## Estrutura do projeto
 
