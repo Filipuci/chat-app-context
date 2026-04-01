@@ -13,14 +13,15 @@ Aplicação de chat interativa desenvolvida com foco em gerenciamento de estado 
 
 - Envio e renderização de mensagens
 - Gerenciamento de estado global com Context API
-- Persistência de mensagens no localStorage
-- Scroll manual para novas mensagens
+- Persistência de mensagens e usuário no localStorage
+- Botão para limpar mensagens (clear)
+- Botão para resetar o estado da aplicação
 - Interface simples e responsiva
 
 ## Screenshot
 
 <img width="1583" height="923" alt="image" src="https://github.com/user-attachments/assets/67670bb6-8b46-4fd1-b3e5-b620c0a9919b" />
-<img width="1148" height="865" alt="image" src="https://github.com/user-attachments/assets/4f8c7b65-d3c8-4ffe-85cf-75498292f64d" />
+<img width="1121" height="745" alt="image" src="https://github.com/user-attachments/assets/9c1eca6e-4d6d-4be9-897a-fe691c150a78" />
 
 ## Como rodar o projeto
 
@@ -48,17 +49,16 @@ http://localhost:3000
 
 ## Aprendizados
 
-- Diferença entre execução no servidor e no cliente no Next.js
 - Uso correto do useEffect para acessar APIs do browser
-- Gerenciamento de estado global com Context API
 - Manipulação e persistência de dados com localStorage
+- Gerenciamento de estado global com Context API
+- Separação de responsabilidades entre componentes
+- Otimização de re-renderizações com useMemo
+- Boas práticas de organização e refatoração de código
 
 ## Melhorias futuras
 
-- Scroll automático para mensagens
-- Salvar user no localStorage
-- Botão para limpar mensagens
-- Refatoração do código utilizando conceito clean code
+- Scroll automático para novas mensagens
 
 ## Licença
 
