@@ -8,12 +8,18 @@ export const ChatActionButton = ({ action }: Props) => {
   const chatCtx = useChatContext()
 
   const clearBtn = () => {
-
+    chatCtx.setMessages([])
+    return localStorage.removeItem('chat_messages')
   }
 
-  const resetBtn = () => {
-
-  }
+  const resetBtn = () => (
+    chatCtx.setMessages([]),
+    chatCtx.setShowScreen(true),
+    chatCtx.setUserName(''),
+    localStorage.removeItem('chat_messages'),
+    localStorage.removeItem('chat_username'),
+    localStorage.removeItem('chat_logged')
+  )
 
   return (
     <button
