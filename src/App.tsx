@@ -12,10 +12,6 @@ const Page = () => {
       <ChatContextProvider>
         <StartScreen />
         <ChatScreen />
-        <div className="flex gap-5">
-          <ChatActionButton action="clear" />
-          <ChatActionButton action="reset" />
-        </div>
       </ChatContextProvider>
 
     </div>

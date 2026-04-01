@@ -1,4 +1,5 @@
 import { useChatContext } from "../contexts/ChatContext"
+import { ChatActionButton } from "./ChatActionButton"
 import { InputMessage } from "./InputMessage"
 
 export const ChatScreen = () => {
@@ -7,24 +8,31 @@ export const ChatScreen = () => {
   return (
     <>
       {!chatCtx.showScreen &&
-        <div className="flex flex-col h-[45vh] w-1/2 border border-zinc-600 rounded-md">
-          <div className="flex-1 flex flex-col overflow-y-auto p-2">
-            {chatCtx.messages.map(message => (
-              <div
-                key={message.id}
-                className={`rounded-md px-2 py-1 max-w-full mb-3 ${message.author === 'user'
-                  ? 'bg-indigo-500 self-end'
-                  : 'bg-zinc-800 self-start'
-                  } `}>
-                <p className="font-bold text-sm">{message.name}</p>
-                <p className="text-[12px] wrap-break-word">{message.message}</p>
-              </div>
-            ))}
+        <>
+          <div className="flex flex-col h-[45vh] w-1/2 border border-zinc-600 rounded-md">
+            <div className="flex-1 flex flex-col overflow-y-auto p-2">
+              {chatCtx.messages.map(message => (
+                <div
+                  key={message.id}
+                  className={`rounded-md px-2 py-1 max-w-full mb-3 ${message.author === 'user'
+                    ? 'bg-indigo-500 self-end'
+                    : 'bg-zinc-800 self-start'
+                    } `}>
+                  <p className="font-bold text-sm">{message.name}</p>
+                  <p className="text-[12px] wrap-break-word">{message.message}</p>
+                </div>
+              ))}
+            </div>
+
+            <InputMessage user="user" />
+            <InputMessage user="bot" />
           </div>
 
-          <InputMessage user="user" />
-          <InputMessage user="bot" />
-        </div>
+          <div className="flex gap-5">
+            <ChatActionButton action="clear" />
+            <ChatActionButton action="reset" />
+          </div>
+        </>
       }
     </>
 
